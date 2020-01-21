@@ -1,0 +1,82 @@
+<html>
+<head>
+<%= stylesheet_link_tag "home.css" %>
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+<body>
+
+
+<div class="header">
+	<div class="tool-bar">
+    <div>
+        <h1>Homepage</h1>
+      </div>
+  	<div>
+  		<i class="fas fa-sign-in-alt"></i>
+  	</div>
+
+  </div>
+
+</div>
+
+<div class="nav-bar">
+	<div class="nav-bar-item">
+		<a href='#'> News </a>
+	</div>
+	<div class="nav-bar-item">
+		<a href='#'> Blog </a>
+	</div>
+	<div class="nav-bar-item">
+		<a href='#'> Documentation </a>
+	</div>
+
+</div>
+
+<div class="content-column">
+	<div>
+		<p>
+			This is the first paragraph and I need some pseudo content just to ensure that I work correctly on this site.
+		</p>
+	</div>
+	<div>
+		<p>
+			Another Paragraph for check how nice I can introduce flex-boxes to create a 3 column view which also good looking.
+		</p>
+	</div>
+	<div>
+		<p>
+			To make them 3 I add some more text here, because three column divided site look so damn awesome.
+		</p>
+	</div>
+</div>
+
+<div class="hl">
+
+</div>
+
+<div class="footer">
+	<div>
+		<a href="#"> help </a><br>
+		<a href="https://www.ruby-lang.org/de/community/"> community </a><br>
+	</div>
+
+	<div>
+		<a href="#"> getting involved </a><br>
+		<a href="#"> ruby meetups </a><br>
+	</div>
+
+	<div>
+		<a href="https://www.ruby-lang.org/de/"> the ruby language </a><br>
+		<a href="#"> ruby feed </a><br>
+	</div>
+
+	<div>
+		<a href="https://repl.it/"> repl.it </a><br>
+    <%= link_to 'about', about_path %>
+	</div>
+
+</div>
+
+
+</body>
+</html>
