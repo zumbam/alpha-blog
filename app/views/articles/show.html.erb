@@ -1,13 +1,15 @@
 <h1>Here is your article</h1>
 
-
+<h3>Title:</h3>
 <p>
-  title: <%= @article.title %>
+  <%= @article.title %>
 </p>
+<h3>Description:</h3>
 <p>
-  description: <%= @article.description %>
+  <%= @article.description %>
 </p>
-
+<div class="hl">
+</div>
 
 <p>
   <%= link_to 'edit article', edit_article_path %> |

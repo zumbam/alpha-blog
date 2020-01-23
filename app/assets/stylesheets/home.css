@@ -1,25 +1,4 @@
-body {
-  font-family: Sans-serif;
-  margin: 0;
-  background-color: #cf0000;
-  color: #F0FFFF;
-  font-size: 24px;
-}
 
-a {
-	text-decoration: none;
-	color: #F0FFFF;
-	text-align: center;
-}
-
-p{
-  text-align: left;
-  margin: 5px;
-
-}
-i{
-  font-size:40px;
-}
 
 
 .tool-bar {
@@ -33,11 +12,9 @@ i{
     margin: 0px 20px;
 }
 
-.tool-bar i{
 
-}
 .tool-bar i:hover{
-	background: #8B0000;
+	background: var(--main-tool-bar-color);
 	color: #F0FFFF;
 }
 
@@ -55,7 +32,7 @@ i{
 .nav-bar {
 	display: flex;
 	flex-flow: row wrap;
-	background: #8B0000
+	background: var(--main-tool-bar-color);
 
 }
 .nav-bar-item {
@@ -65,20 +42,20 @@ i{
 
 .nav-bar-item a{
 	padding: 0px 20px;
-	color: #F0FFFF;
+	color: var(--main-color);
 	text-decoration: none;
 }
 
 .nav-bar-item:hover {
-	background: #cf0000;
+	background: var(--main-bg-color);
 }
 
 .content-column {
 	height: 380px;
 	display: flex;
 	flex-flow: row wrap;
-	background: #cf0000;
-	color: #F0FFFF;
+	background: var(--main-bg-color);
+	color: var(--main-color);
 }
 
 .content-column div {
@@ -87,8 +64,8 @@ i{
 
 
 .content-column div:hover {
-	background: #bc0000;
-	color: #F0FFFF;
+	background: var(--main-hightlight-color);
+	color: var(--main-color);
 
 }
 
@@ -96,15 +73,14 @@ i{
   height: 380px;
 	display: flex;
 	flex-direction: row;
-	background: #cf0000;
-
-	color: #F0FFFF;
+	background: var(--main-bg-color);
+	color: var(--main-color);
 	padding: 20 20;
 	text-align: center;
 }
 
 .footer {
-	background: #cf0000;
+	background: var(--main-bg-color);
 	display: flex;
 	justify-content: space-between;
 }
@@ -137,5 +113,5 @@ i{
 }
 
 .hl{
-  border-bottom: 3px solid #8B0000;
+  border-bottom: 3px solid var(--main-tool-bar-color);
 }
