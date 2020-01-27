@@ -1,0 +1,42 @@
+@import 'bootstrap/dist/css/bootstrap';
+
+:root{
+   --main-bg-color: #cf0000;
+   --main-color: #F0FFFF;
+   --main-tool-bar-color: #8B0000;
+   --main-hightlight-color: #bc0000;
+}
+
+
+.header {
+	background-image: url('https://www.zweitag.de/assets/images/landing-pages/header-rubyonrails-af837f8d.png');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	height: 240px;
+}
+
+.bg-dark-red {
+	background-color: var(--main-tool-bar-color);
+}
+.nav-item{
+  color: var(--main-color)
+}
+
+// .navbar-item {
+// 	padding: 5px 20px;
+//
+// }
+
+// .navbar {
+// background-color: #FDF6EA !important;
+// }
+//
+//
+// .navbar-brand {
+// font-size: 3rem;
+// }
+//
+// h1 {
+// color: red;
+// }

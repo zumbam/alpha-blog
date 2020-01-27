@@ -1,7 +1,9 @@
-<ul>
-  <% flash.each do |name, msg| %>
-    <li>
-        <%= msg %>
-    </li>
-  <% end %>
-</ul>
+<% unless flash.empty? %>
+  <ul>
+    <% flash.each do |name, msg| %>
+      <li>
+          <%= msg %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
