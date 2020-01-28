@@ -1,9 +1,12 @@
 <% unless flash.empty? %>
-  <ul>
-    <% flash.each do |name, msg| %>
-      <li>
-          <%= msg %>
-      </li>
-    <% end %>
-  </ul>
+  <div class="row">
+    <div class="col-md-10 offset-md-1 mt-3">
+      <% flash.each do |name, msg| %>
+         <div class='alert alert-<%="#{name}" %>'>
+         <a href="#" class="close" data-dismiss="alert">×</a>
+         <%= content_tag :div, msg, :id => "flash_#{name}" if msg.is_a?(String) %>
+       </div>
+     <% end %>
+    </div>
+  </div>
 <% end %>

@@ -20,7 +20,7 @@ class ArticlesController < ApplicationController
     @article = Article.new(article_params)
     successfully_saved = @article.save
     if successfully_saved
-      flash['notice'] = "the article has been successfully saved"
+      flash['success'] = "the article has been successfully saved"
       redirect_to article_path(@article)
     else
       render 'new'
@@ -32,7 +32,7 @@ class ArticlesController < ApplicationController
     @article = Article.find(params[:id])
     successfully_updated = @article.update(article_params)
     if successfully_updated
-      flash['notice'] = "article has been successfully updated"
+      flash['success'] = "article has been successfully updated"
       redirect_to article_path(@article)
     else
       render 'edit'
@@ -43,7 +43,7 @@ class ArticlesController < ApplicationController
 
     successfully_deleted = @article.delete
     if successfully_deleted
-      flash['notice'] = "the article was successfully deleted"
+      flash['success'] = "the article was successfully deleted"
     end
     redirect_to articles_path
   end
