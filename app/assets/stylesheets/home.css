@@ -115,3 +115,16 @@
 .hl{
   border-bottom: 3px solid var(--main-tool-bar-color);
 } */
+
+.content-column {
+	height: 380px;
+	background: var(--main-bg-color);
+	color: var(--main-color);
+}
+
+
+.content-column:hover {
+	background: var(--main-hightlight-color);
+	color: var(--main-color);
+
+}

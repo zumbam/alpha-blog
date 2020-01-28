@@ -4,33 +4,56 @@
 </head>
 <body>
 
-
-<div class="jumbotron header">
+<div class="jumbotron-fluid header">
 	<div class="tool-bar">
-    <div>
         <h1>Homepage</h1>
-    </div>
   </div>
 </div>
 
+<div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+  <!-- <ol class="carousel-indicators">
+    <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li> -->
+    <!-- <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+    <li data-target="#carouselExampleCaptions" data-slide-to="2"></li> -->
+  <!-- </ol> -->
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+			<%= image_tag "Mockup-Alpha-Blog.png", class:"d-block w-100", alt:"Image of Alpha Blog" %>
+      <!-- <div class="carousel-caption d-none d-md-block">
+        <h5>Alpha Blog</h5>
+        	<p><%= link_to 'Alpha Blog', articles_path %> is a simple application where u can save articles into a database.</p>
+      </div> -->
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
 
-<div class="content-column">
-	<div>
-		<h1> Alpha Blog </h1>
-		<p>
-			<%= link_to 'Alpha Blog', articles_path %> is a simple application where u can save articles into a database.
 
-		</p>
-	</div>
-	<div>
-		<p>
-			Another Paragraph for check how nice I can introduce flex-boxes to create a 3 column view which also good looking.
-		</p>
-	</div>
-	<div>
-		<p>
-			To make them 3 I add some more text here, because three column divided site look so damn awesome.
-		</p>
+<div class="container-fluid">
+	<div class="row">
+		<div class="col content-column" >
+			<h1> Alpha Blog </h1>
+				<p>
+					<%= link_to 'Alpha Blog', articles_path %> is a simple application where u can save articles into a database.
+				</p>
+		</div >
+		<div class="col content-column">
+			<p>
+				Another Paragraph for check how nice I can introduce flex-boxes to create a 3 column view which also good looking.
+			</p>
+		</div>
+		<div class="col content-column">
+			<p>
+				To make them 3 I add some more text here, because three column divided site look so damn awesome.
+			</p>
+		</div>
 	</div>
 </div>
 
@@ -59,7 +82,7 @@
     <%= link_to 'about', about_path %>
 	</div>
 
-</div>
+</div> --> %>
 
 
 </body>
