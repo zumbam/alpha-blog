@@ -1,0 +1,44 @@
+<html>
+  <body>
+    <footer class="container-fluid footer">
+      <div class="row">
+      	<div class="col-md">
+      		<a href="#"> help </a>
+      	</div>
+      	<div class="col-md">
+      		<a href="#"> getting involved </a>
+      	</div>
+      	<div class="col-md">
+      		<a href="https://www.ruby-lang.org/de/"> the ruby language </a>
+      	</div>
+      	<div class="col-md">
+      		<a href="https://repl.it/"> repl.it </a>
+      	</div>
+      </div>
+
+      <div class="row" >
+        <div class="col-md">
+          <a href="https://www.ruby-lang.org/de/community/"> community </a>
+        </div>
+        <div class="col-md">
+          <a href="#"> ruby meetups </a>
+        </div>
+        <div class="col-md">
+          <a href="#"> ruby feed </a>
+        </div>
+        <div class="col-md">
+          <%= link_to 'about', about_path %>
+        </div>
+      </div>
+
+      <div class="row copyright-line">
+        <div class="col-md">
+          <small>
+            Copyright &copy; Project Homepage by <%= link_to "Stefan Ronczka", about_path %>
+          </small>
+        </div>
+      </div>
+
+    </footer>
+  </body>
+</html>

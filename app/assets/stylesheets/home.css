@@ -1,3 +1,5 @@
+@import "variable";
+
 /*
 
 
@@ -117,14 +119,11 @@
 } */
 
 .content-column {
-	height: 380px;
-	background: var(--main-bg-color);
-	color: var(--main-color);
+	background: $main-bg-color;
+	color: $main-color;
 }
 
-
 .content-column:hover {
-	background: var(--main-hightlight-color);
-	color: var(--main-color);
-
+	background: $main-hightlight-color;
+	color: $main-color;
 }

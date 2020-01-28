@@ -4,10 +4,8 @@
 </head>
 <body>
 
-<div class="jumbotron-fluid header">
-	<div class="tool-bar">
-        <h1>Homepage</h1>
-  </div>
+
+<div class="header">
 </div>
 
 <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
@@ -18,12 +16,11 @@
   <!-- </ol> -->
   <div class="carousel-inner">
     <div class="carousel-item active">
-			<%= image_tag "Mockup-Alpha-Blog.png", class:"d-block w-100", alt:"Image of Alpha Blog" %>
-      <!-- <div class="carousel-caption d-none d-md-block">
-        <h5>Alpha Blog</h5>
-        	<p><%= link_to 'Alpha Blog', articles_path %> is a simple application where u can save articles into a database.</p>
-      </div> -->
-    </div>
+			<div class="jumbotron project-item project-image">
+        <h1 class="display-4">Alpha Blog</h1>
+				<%= link_to 'Sign up now', articles_path, class: "btn btn-lg btn-dark-red-bordered" %>
+      </div>
+		</div>
   </div>
   <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -36,53 +33,27 @@
 </div>
 
 
-<div class="container-fluid">
+<!-- <div class="container-fluid">
 	<div class="row">
-		<div class="col content-column" >
+		<div class="col-md content-column" >
 			<h1> Alpha Blog </h1>
 				<p>
-					<%= link_to 'Alpha Blog', articles_path %> is a simple application where u can save articles into a database.
+					<%# <%= link_to 'Alpha Blog', articles_path %> is a simple application where u can save articles into a database. %>
 				</p>
 		</div >
-		<div class="col content-column">
+		<div class="col-md content-column">
 			<p>
 				Another Paragraph for check how nice I can introduce flex-boxes to create a 3 column view which also good looking.
 			</p>
 		</div>
-		<div class="col content-column">
+		<div class="col-md content-column">
 			<p>
 				To make them 3 I add some more text here, because three column divided site look so damn awesome.
 			</p>
 		</div>
 	</div>
-</div>
+</div> -->
 
-<div class="hl">
-
-</div>
-
-<div class="footer">
-	<div>
-		<a href="#"> help </a><br>
-		<a href="https://www.ruby-lang.org/de/community/"> community </a><br>
-	</div>
-
-	<div>
-		<a href="#"> getting involved </a><br>
-		<a href="#"> ruby meetups </a><br>
-	</div>
-
-	<div>
-		<a href="https://www.ruby-lang.org/de/"> the ruby language </a><br>
-		<a href="#"> ruby feed </a><br>
-	</div>
-
-	<div>
-		<a href="https://repl.it/"> repl.it </a><br>
-    <%= link_to 'about', about_path %>
-	</div>
-
-</div> --> %>
 
 
 </body>

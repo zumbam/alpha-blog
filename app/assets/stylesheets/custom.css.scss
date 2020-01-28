@@ -1,47 +1,80 @@
 @import 'bootstrap/dist/css/bootstrap';
+@import "variable";
 
-:root{
-   --main-bg-color: #cf0000;
-   --main-color: #F0FFFF;
-   --main-tool-bar-color: #8B0000;
-   --main-hightlight-color: #bc0000;
+a {
+  text-decoration: none;
+  color: $main-color;
+  font-weight: bold;
+  // font-style: italic;
+}
+
+.side-image {
+  font-size: 10em;
 }
 
 
+.jumbotron {
+  font-weight: bold;
+  text-transform: uppercase;
+  color: $main-color;
+  background-color: $main-bg-color;
+  text-align: center;
+  // border: 2px solid $main-tool-bar-color;
+
+}
 .header {
 	background-image: url('https://www.zweitag.de/assets/images/landing-pages/header-rubyonrails-af837f8d.png');
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
-	height: 240px;
+	height: 10em;
 }
 
 .bg-dark-red {
-	background-color: var(--main-tool-bar-color);
+	background-color: $main-tool-bar-color;
 }
+
+.btn-dark-red-bordered{
+  background-color: $main-tool-bar-color;
+  border-width: medium;
+  border-color: $main-tool-bar-color;
+  color: $main-color;
+}
+
+.btn-dark-red-bordered:hover{
+    color: $main-color;
+    background-color: $main-hightlight-color;
+    border-color: $main-color;
+}
+
 .nav-item{
-  color: var(--main-color)
+  color: $main-color;
 }
 
-.carousel-item{
-  // opacity: 50%;
+.project-item {
+	text-align: center;
+	color: $main-color;
+  background-color: $main-bg-color;
+  background: $main-bg-color;
+  height: 25em;
 
 }
 
-// .navbar-item {
-// 	padding: 5px 20px;
-//
-// }
+.project-image {
+  background-image: asset-url('Mockup-Alpha-Blog.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-blend-mode: soft-light;
 
-// .navbar {
-// background-color: #FDF6EA !important;
-// }
-//
-//
-// .navbar-brand {
-// font-size: 3rem;
-// }
-//
-// h1 {
-// color: red;
-// }
+}
+
+.copyright-line {
+  color: $main-color;
+  text-align: right;
+}
+
+.footer{
+  border-top: 2px solid $main-tool-bar-color;
+  background: $main-bg-color;
+}
