@@ -80,5 +80,17 @@ a {
 }
 
 .center{
-  text-align: center; 
+  text-align: center;
+}
+
+.article{
+  background: $main-hightlight-color;
+}
+
+.article-header{
+  background: $main-tool-bar-color;
+}
+
+.article-body{
+  background: $main-hightlight-color;
 }
