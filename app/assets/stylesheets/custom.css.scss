@@ -19,7 +19,6 @@ a {
   color: $main-color;
   background-color: $main-bg-color;
   text-align: center;
-  // border: 2px solid $main-tool-bar-color;
 
 }
 .header {
@@ -52,12 +51,9 @@ a {
 }
 
 .project-item {
-	text-align: center;
 	color: $main-color;
   background-color: $main-bg-color;
   background: $main-bg-color;
-  height: 25em;
-
 }
 
 .project-image {
@@ -66,7 +62,6 @@ a {
   background-repeat: no-repeat;
   background-position: bottom;
   background-blend-mode: soft-light;
-
 }
 
 .copyright-line {
