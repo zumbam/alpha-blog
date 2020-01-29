@@ -99,3 +99,21 @@ a {
   border-top: 1px solid $main-tool-bar-color;
   margin-top: 15px;
 }
+
+.card-user{
+  background: $main-hightlight-color;
+}
+
+.card-user-header{
+  background: $main-tool-bar-color;
+}
+
+.card-user-body{
+  background: $main-hightlight-color;
+}
+
+
+.listing{
+  list-style: none;
+  padding-left: 0;
+}

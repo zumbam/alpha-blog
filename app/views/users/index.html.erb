@@ -1,0 +1,23 @@
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-6 offset-md-3">
+      <h1 class="center"> Listing of all users </h1>
+    </div>
+  </div>
+
+  <% @users.each do |user| %>
+    <div class="row mb-3">
+      <div class="col-md-8 offset-md-2 card card-user center">
+        <div class="card-body card-user-body">
+          <ul class="listing">
+            <li> <%= link_to gravatar_for(user, size:80), user_path(user) %> </li>
+            <li> <%= link_to user.username, user_path(user) %> </li>
+            <li> <%= link_to user.email, user_path(user)  %> </li>
+            <li> <%= pluralize(user.articles.count, "article") %> </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
