@@ -20,8 +20,15 @@
           <div class="card-body article-body">
             <%= truncate article.description, length:100 %>
 
-            <hr>
-            <div class="mb-1">
+            <div class="article-meta-details">
+              <small> Created by: <%= article.user.username if article.user %>
+                 <%= time_ago_in_words article.created_at %>, last updated:
+                 <%= time_ago_in_words article.updated_at %>
+                </small>
+            </div>
+
+            <hr class="mb-2">
+            <div class="mb-0">
               <%= link_to 'edit this article', edit_article_path(article), class: "btn btn-primary btn-xs" %>
               <%= link_to 'delete this article', article_path(article), method: :delete,
                           class: "btn btn-danger btn-xs", data: {confirm: "Are you sure"}%>
