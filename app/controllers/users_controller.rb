@@ -7,12 +7,16 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
   end
 
+  def show
+    @user = User.find(params[:id])
+  end
+
 
   def create
     @user = User.new(user_params)
     if @user.save
       flash[:success] = "Welcome to Alpha-Blog #{@user.username}"
-      redirect_to articles_path
+      redirect_to user_path(@user)
     else
       render :new
     end
@@ -23,7 +27,7 @@ class UsersController < ApplicationController
     successfully_updated = @user.update(user_params)
     if successfully_updated
       flash[:success] = 'Your accout has successfully updated'
-      redirect_to articles_path
+      redirect_to user_path(@user)
     else
       render :edit
     end
