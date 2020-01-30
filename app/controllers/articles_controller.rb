@@ -44,7 +44,7 @@ class ArticlesController < ApplicationController
   end
 
   def destroy
-
+    debugger
     successfully_deleted = @article.delete
     if successfully_deleted
       flash['success'] = "the article was successfully deleted"
@@ -62,7 +62,7 @@ private
   end
 
   def require_same_user
-    unless (logged_in? && (current_user == @article.user || current_user.admin))
+    if !(logged_in? && (current_user == @article.user || current_user.admin))
       flash[:danger] = "you can only edit delete your own article"
       redirect_to root_path
     end

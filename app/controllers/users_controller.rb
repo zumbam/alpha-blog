@@ -1,7 +1,8 @@
 class UsersController < ApplicationController
 
-before_action :set_user, only: [:edit, :show, :update, :delete]
-before_action :require_same_user, only: [:edit, :update, :destroy]
+before_action :set_user, only: [:edit, :show, :update, :destroy]
+before_action :require_same_user, only: [:edit, :update]
+before_action :require_admin, only: [:destroy]
 
   def index
     @users = User.all
@@ -39,12 +40,12 @@ before_action :require_same_user, only: [:edit, :update, :destroy]
     end
   end
 
-  def delete
+  def destroy
     successfully_deleted = @user.delete
     if successfully_deleted
-      flash[:success] = "User successfully deleted"
+      flash[:success] = "User successfully deleted with all it's articles"
     end
-      redirect_to users_path
+    redirect_to users_path
   end
 
   private
@@ -59,6 +60,13 @@ before_action :require_same_user, only: [:edit, :update, :destroy]
   def require_same_user
     if !(logged_in? && (current_user == @user || current_user.admin))
       flash[:danger] = "You have no permission to do this action"
+      redirect_to root_path
+    end
+  end
+
+  def require_admin
+    if logged_in? && !current_user.admin
+      flash[:danger] = "Only admin can delete users"
       redirect_to root_path
     end
   end
