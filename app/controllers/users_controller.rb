@@ -1,5 +1,8 @@
 class UsersController < ApplicationController
 
+before_action :set_user, only: [:edit, :show, :update, :delete]
+before_action :require_same_user, only: [:edit, :update, :destroy]
+
   def index
     @users = User.all
   end
@@ -9,11 +12,9 @@ class UsersController < ApplicationController
   end
 
   def edit
-    @user = User.find(params[:id])
   end
 
   def show
-    @user = User.find(params[:id])
   end
 
 
@@ -28,7 +29,6 @@ class UsersController < ApplicationController
   end
 
   def update
-    @user = User.find(params[:id])
     successfully_updated = @user.update(user_params)
     if successfully_updated
       flash[:success] = 'Your accout has successfully updated'
@@ -38,9 +38,28 @@ class UsersController < ApplicationController
     end
   end
 
+  def delete
+    successfully_deleted = @user.delete
+    if successfully_deleted
+      flash[:success] = "User successfully deleted"
+    end
+      redirect_to users_path
+  end
+
   private
   def user_params
     params.require(:user).permit(:username, :email, :password)
+  end
+
+  def set_user
+    @user = User.find(params[:id])
+  end
+
+  def require_same_user
+    if @user != current_user
+      flash[:danger] = "You have no permission to do this action"
+      redirect_to root_path
+    end
   end
 
 end
