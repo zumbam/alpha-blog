@@ -18,7 +18,7 @@
                 </small>
             </div>
 
-            <% if current_user == article.user %>
+            <% if logged_in? && (current_user == article.user || current_user.admin)%>
               <hr class="mb-2">
               <div class="mb-0">
                 <%= link_to 'edit this article', edit_article_path(article), class: "btn btn-primary btn-xs" %>

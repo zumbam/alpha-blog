@@ -62,7 +62,7 @@ private
   end
 
   def require_same_user
-    if current_user != @article.user
+    unless (logged_in? && (current_user == @article.user || current_user.admin))
       flash[:danger] = "you can only edit delete your own article"
       redirect_to root_path
     end
