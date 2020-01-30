@@ -1,6 +1,7 @@
 @import 'bootstrap/dist/css/bootstrap';
 @import "variable";
 
+// basic style definitions
 a {
   text-decoration: none;
   color: $main-color;
@@ -8,29 +9,23 @@ a {
   // font-style: italic;
 }
 
+// additional style modifications
+
+.bg-dark-red {
+	background-color: $main-tool-bar-color;
+}
+
 .side-image {
   font-size: 10em;
 }
 
-
+// components
 .jumbotron {
   font-weight: bold;
   text-transform: uppercase;
-  color: $main-color;
-  background-color: $main-bg-color;
+  color: $second-color;
+  background-color: $second-bg-color;
   text-align: center;
-
-}
-.header {
-	background-image: url('https://www.zweitag.de/assets/images/landing-pages/header-rubyonrails-af837f8d.png');
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: cover;
-	height: 10em;
-}
-
-.bg-dark-red {
-	background-color: $main-tool-bar-color;
 }
 
 .btn-dark-red-bordered{
@@ -46,14 +41,21 @@ a {
     border-color: $main-color;
 }
 
+.header {
+	background-image: url('https://www.zweitag.de/assets/images/landing-pages/header-rubyonrails-af837f8d.png');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	height: 10em;
+}
+
 .nav-item{
   color: $main-color;
 }
 
 .project-item {
-	color: $main-color;
-  background-color: $main-bg-color;
-  background: $main-bg-color;
+	color: $second-color;
+  background-color: $second-bg-color;
 }
 
 .project-image {
@@ -76,7 +78,7 @@ a {
 
 .card-description{
   color: $main-color;
-  background-color: $main-hightlight-color;
+  background-color: $second-bg-color;
 }
 
 .center{
@@ -84,7 +86,7 @@ a {
 }
 
 .article{
-  background: $main-hightlight-color;
+  background: $second-bg-color;
 }
 
 .article-header{
@@ -92,7 +94,7 @@ a {
 }
 
 .article-body{
-  background: $main-hightlight-color;
+  background: $card-bg-color
 }
 
 .article-meta-details {
@@ -101,7 +103,7 @@ a {
 }
 
 .card-user{
-  background: $main-hightlight-color;
+  background: $second-bg-color;
 }
 
 .card-user-header{
@@ -109,7 +111,7 @@ a {
 }
 
 .card-user-body{
-  background: $main-hightlight-color;
+  background: $card-bg-color
 }
 
 
