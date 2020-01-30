@@ -1,37 +1,54 @@
-<head>
-  <script>
-    $(document).ready(function(){
-  	$("#navbarDropdown").click(function({
-      // var dropdownstring = $(self).html();
-    $("#navbarDropdown").html("hello world");
-    }))
-  }
-  </script>
-</head>
-
 <!-- navbar ****** -->
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark-red">
-      <%= link_to 'Home',root_path, class: 'navbar-brand'  %>
+    <%= link_to 'Home',root_path, class: 'navbar-brand'  %>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
 
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Projects
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <%=link_to 'Alpha Blog', articles_path , class: 'dropdown-item' %>
-          </div>
+        <li class="nav-item">
+          <%= link_to 'Articles', articles_path, class: "nav-link"  %>
         </li>
-      </ul>
-      <span class="nav-item">
-        <i class="fas fa-sign-in-alt"></i>
-      </span>
+
+        <% if logged_in? %>
+          <li class="nav-item">
+            <%= link_to 'Users', users_path, class: "nav-link"  %>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+               Actions
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <%=link_to 'Create article', new_article_path , class: 'dropdown-item' %>
+            </div>
+          </li>
+        <% end %>
+        </ul>
+
+
+        <% if logged_in? %>
+          <div class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <%= current_user.username %>
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <%=link_to 'Edit user data', edit_user_path(current_user) , class: 'dropdown-item' %>
+              <%=link_to 'Profile', user_path(current_user) , class: 'dropdown-item' %>
+              <%=link_to 'logout', logout_path, method: :delete, class: "dropdown-item"  %>
+            </div>
+          </div>
+        <% else %>
+          <div class="nav-item">
+            <%= link_to 'login', login_path, class: "nav-link btn btn-primary mr-1" %>
+          </div>
+          <div class="nav-item">
+            <%= link_to 'signup', signup_path, class: "nav-link btn btn-secondary"  %>
+          </div>
+        <% end%>
+
     </div>
   </nav>
 
