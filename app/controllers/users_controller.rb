@@ -65,10 +65,14 @@ before_action :require_admin, only: [:destroy]
   end
 
   def require_admin
-    if logged_in? && !current_user.admin
-      flash[:danger] = "Only admin can delete users"
-      redirect_to root_path
+    if logged_in?
+      if current_user.admin
+        return
+      end
     end
+
+    flash[:danger] = "Only admin can delete users"
+    redirect_to root_path
   end
 
 end
