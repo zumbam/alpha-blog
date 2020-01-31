@@ -6,13 +6,15 @@
           <%= pluralize(obj.errors.count, "error") %>
           prohibit this article from being saved:
         </h2>
-        <ul>
-          <% obj.errors.full_messages.each do |msg| %>
-            <li>
-              <%= msg %>
-            </li>
-          <% end %>
-        </ul>
+        <div class='alert-body'>
+          <ul>
+            <% obj.errors.full_messages.each do |msg| %>
+              <li>
+                <%= msg %>
+              </li>
+            <% end %>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
