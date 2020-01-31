@@ -7,7 +7,7 @@ class  CreateCategoriesTest < ActionDispatch::IntegrationTest
     assert_response :success
     assert_template 'categories/new'
     assert_difference 'Category.count' do
-      post categories_path, params: {category: {name: 'sports'}}
+      post categories_path, params: {category: {name: 'books'}}
       follow_redirect!
     end
     assert_template 'categories/index'

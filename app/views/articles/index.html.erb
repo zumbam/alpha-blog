@@ -1,20 +1,8 @@
 
-<div class="row mb-3">
-  <div class="col-md-4 offset-md-4">
-      <h1 class="center mb-5">Listing of all Articles</h1>
-  </div>
-</div>
+<h1 class="center mb-5">Listing of all Articles</h1>
 
-<div class="row mb-3">
-  <div class="col-md-2 offset-md-5">
-    <%= will_paginate %>
-  </div>
-</div>
+<%= will_paginate list_classes: ['pagination', 'justify-content-center'] %>
 
 <%= render 'articles', obj: @articles %>
 
-<div class="row">
-  <div class="col-md-2 offset-md-5">
-    <%= will_paginate %>
-  </div>
-</div>
+<%= will_paginate list_classes: ['pagination', 'justify-content-center'] %>
