@@ -41,7 +41,7 @@ before_action :require_admin, only: [:destroy]
   end
 
   def destroy
-    successfully_deleted = @user.delete
+    successfully_deleted = @user.destroy
     if successfully_deleted
       flash[:success] = "User successfully deleted with all it's articles"
     end

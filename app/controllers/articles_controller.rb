@@ -44,7 +44,6 @@ class ArticlesController < ApplicationController
   end
 
   def destroy
-    debugger
     successfully_deleted = @article.delete
     if successfully_deleted
       flash['success'] = "the article was successfully deleted"
