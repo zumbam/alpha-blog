@@ -114,8 +114,15 @@ a {
   background: $card-bg-color
 }
 
-
 .listing{
   list-style: none;
   padding-left: 0;
+}
+
+.badge{
+  background-color: $main-tool-bar-color;
+  text-transform: uppercase;
+  // letter-spacing: -1px;
+  font-weight: bold;
+
 }

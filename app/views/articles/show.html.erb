@@ -18,6 +18,9 @@
       <div class="card-body article-body">
         <h4 class= > Description:</h4>
         <%= simple_format @article.description%>
+        <div>
+          <%= render @article.categories %>
+        </div>
         <hr>
         <div class="mb-1">
           <% if logged_in? && (current_user == @article.user || current_user.admin) %>

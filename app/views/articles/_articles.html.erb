@@ -18,6 +18,10 @@
                 </small>
             </div>
 
+            <% if article.categories.any? %>
+              <%=render article.categories %>
+            <% end %>
+
             <% if logged_in? && (current_user == article.user || current_user.admin)%>
               <hr class="mb-2">
               <div class="mb-0">
