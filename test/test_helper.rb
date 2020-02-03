@@ -14,4 +14,8 @@ class ActiveSupport::TestCase
   def sign_in(email:, password:)
     post login_path, params: {session: {email: email, password: password}}
   end
+
+  def create_test_article(user:,categories:[], title: 'test', description: 'this is a test')
+    Article.create(title: title, description: description, user: user, categories: categories)
+  end
 end

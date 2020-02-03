@@ -16,7 +16,7 @@ class  CreateCategoriesTest < ActionDispatch::IntegrationTest
       follow_redirect!
     end
     assert_template 'categories/index'
-    assert_match 'sports'.downcase, response.body
+    assert_match 'sports'.upcase, response.body
 
   end
 
