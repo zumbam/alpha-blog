@@ -1,0 +1,8 @@
+
+<h1 class="center mb-5"> <%= @category.name %> </h1>
+
+<%= will_paginate @category_articles,  list_classes: ['pagination', 'justify-content-center'] %>
+
+<%= render 'articles/articles', obj: @category_articles %>
+
+<%= will_paginate @category_articles,  list_classes: ['pagination', 'justify-content-center'] %>
