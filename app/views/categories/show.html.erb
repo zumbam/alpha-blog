@@ -1,5 +1,14 @@
+<h1 class="center"> <%= @category.name %> </h1>
 
-<h1 class="center mb-5"> <%= @category.name %> </h1>
+<% if logged_in_as_admin? %>
+  <div class="row mb-5">
+    <div class="col center">
+      <span class="badge">
+        <%= link_to "Edit category", edit_category_path(@category) %>
+      </span>
+    </div>
+  </div>
+<% end %>
 
 <%= will_paginate @category_articles,  list_classes: ['pagination', 'justify-content-center'] %>
 
