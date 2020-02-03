@@ -17,10 +17,10 @@
              Categories
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <%=link_to 'All Categories', categories_path , class: 'dropdown-item' %>
+            <%=link_to 'All Categories'.downcase.capitalize, categories_path , class: 'dropdown-item' %>
 
             <% Category.all.each do |category| %>
-              <%=link_to "#{category.name}", category_path(category) , class: 'dropdown-item' %>
+              <%=link_to "#{category.name.downcase.capitalize}", category_path(category) , class: 'dropdown-item' %>
             <%end%>
 
             <% if logged_in_as_admin? %>

@@ -1,4 +1,4 @@
-<h1 class="center"> <%= @category.name %> </h1>
+<h1 class="center"> <%= @category.name.upcase %> </h1>
 
 <% if logged_in_as_admin? %>
   <div class="row mb-5">
