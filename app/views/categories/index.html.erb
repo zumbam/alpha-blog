@@ -9,7 +9,7 @@
         <li>
           <div class="card center article">
             <div class="card-header article-header">
-              <%= link_to "#{category.name} (#{category.articles.count})", category_path(category) %> 
+              <%= link_to "#{category.name.upcase} (#{category.articles.count})", category_path(category) %> 
             </div>
           </div>
         </li>

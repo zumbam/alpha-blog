@@ -18,19 +18,27 @@ class CategoryTest < ActiveSupport::TestCase
   end
 
   test "category uniqueness" do
-    Category.create(name: 'sports')
+    @sports.save
     category = Category.new(name: 'sports')
     assert_not category.valid?
   end
 
-  test "cathgory max length" do
+  test 'category is really unique due to cases' do
+    @sports.save
+    category = Category.new(name: 'Sports')
+    assert_not category.valid?
+  end
+
+  test "category max length" do
     @sports.name = "a" * 26
     assert_not @sports.valid?
   end
 
-  test "cathgory min length" do
+  test "category min length" do
     @sports.name = "a" * 2
     assert_not @sports.valid?
   end
+
+
 
 end

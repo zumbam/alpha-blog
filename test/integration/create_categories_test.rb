@@ -3,11 +3,11 @@ require 'test_helper'
 class  CreateCategoriesTest < ActionDispatch::IntegrationTest
 
   def setup
-    @user = User.create(username: "test", email: "test@example.com", password: "password", admin:true)
+    @admin = User.create(username: "test", email: "test@example.com", password: "password", admin:true)
   end
 
   test 'get new category form and create category' do
-    sign_in(email: @user.email, password: @user.password)
+    sign_in(email: @admin.email, password: @admin.password)
     get new_category_path
     assert_response :success
     assert_template 'categories/new'
@@ -16,12 +16,12 @@ class  CreateCategoriesTest < ActionDispatch::IntegrationTest
       follow_redirect!
     end
     assert_template 'categories/index'
-    assert_match 'sports', response.body
+    assert_match 'sports'.downcase, response.body
 
   end
 
   test 'invalid category submission results in failure' do
-    sign_in(email: @user.email, password: @user.password)
+    sign_in(email: @admin.email, password: @admin.password)
     get new_category_path
     assert_response :success
     assert_template 'categories/new'
